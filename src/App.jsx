@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 import { logo } from './assets';
 import { Home, CreatePost } from './pages';
+import Footer from './components/Footer';
 
 const App = () => (
   <BrowserRouter>
@@ -19,6 +20,7 @@ const App = () => (
         <Route path="/create-post" element={<CreatePost />} />
       </Routes>
     </main>
+    <Footer />
   </BrowserRouter>
 );
 
