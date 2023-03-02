@@ -40,7 +40,7 @@ const CreatePost = () => {
         const data = await response.json();
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
       } catch (err) {
-        alert(err);
+        alert("Uh oh! Looks like the API has reached its limit. If you want to give this app a try, please drop me a message and I'll be sure to update it.");
       } finally {
         setGeneratingImg(false);
       }
@@ -65,7 +65,7 @@ const CreatePost = () => {
 
         await response.json();
         alert('Success');
-        navigate('/');
+        navigate('/ai-image-generation');
       } catch (err) {
         alert(err);
       } finally {
